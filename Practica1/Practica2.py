@@ -69,3 +69,86 @@ def mutliplicar (primero, segundo):
     return primero*segundo
 print (mutliplicar(3,2))
 
+#funciones(def)
+def saludar(nombre):
+     return f"hola {nombre}"
+print(saludar("carlos"))
+
+#clases y obejtos
+class Persona:
+     def __init__(self,nombre,edad):
+          self.nombre=nombre
+          self.edad=edad
+     def saludar(self):
+          print("hola soy",self.nombre,"tengo",self.edad,"Años")
+persona1 = Persona("Ana", 20) # Crear objeto
+persona1.saludar()
+
+#funcion compleja
+def quicksort(lista):
+    if len(lista)<= 1:
+         return lista
+
+    pivote = lista[0]
+    izquierda = []
+    derecha = []
+
+    for i in range(1, len(lista)):
+          if lista[i] < pivote:
+            izquierda.append(lista[i])
+          else:
+            derecha.append(lista[i])           
+    return quicksort(izquierda) + [pivote] + quicksort(derecha)
+print(quicksort(numeros))
+
+
+#Split the sentence into words
+sentence= input("digite la cadena de texto")
+words = sentence.split()
+word_count = {} # initialize dictionary
+for word in words:  # count word frequence
+    word= word.lower()
+    if word in word_count:
+        word_count[word] +=1
+    else:
+        word_count[word]=1
+print(word_count)       
+
+
+#Cadena
+sentence ="Python is fun"
+words = sentence.split()
+print(words)
+
+#join
+new_sentence= "|" .join(words)
+print(new_sentence)
+
+text= "I love java"
+update_text = text.replace("java", "Python")
+print(update_text)
+
+messy=" hello, world"
+cleaned_text = messy.strip()
+print(cleaned_text)
+
+import re
+text= "Contac me at 123-456-7890"
+digits = re.findall(r"\d+",text)
+print(digits)
+
+update_text= re.sub (r"\d", "X",  text)
+print(update_text)
+
+
+import statistics
+def estadisticas(lista):
+    media= statistics.mean(lista)
+    mediana= statistics.median(lista)
+    moda=statistics.mode(lista)
+    return media,mediana,moda
+
+numeros=[1,2,3,4,5,5,5]
+media,mediana,moda=estadisticas(numeros)
+print(f"Media: {media}, Mediana:{mediana}, Moda:{moda}")
+
