@@ -152,3 +152,46 @@ numeros=[1,2,3,4,5,5,5]
 media,mediana,moda=estadisticas(numeros)
 print(f"Media: {media}, Mediana:{mediana}, Moda:{moda}")
 
+#funcion tarea 
+def contar_pares_impares(lista):
+    pares = 0
+    impares = 0
+    for numero in lista:
+        if numero % 2 == 0:
+            pares += 1
+        else:
+            impares += 1
+    return pares, impares
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+pares, impares = contar_pares_impares(numeros)
+print(1,2,3,4,5,6,7,8,9)
+print(f"Pares: {pares}, Impares: {impares}")
+
+
+#Funcion Tarea 
+def buscar_numero(lista, n):
+    if n in lista:
+        return True
+    else:
+        return False
+numeros = [10, 20, 30, 40, 50]
+print(10,20,30,40,50)
+print("¿El numero 30 esta en la lista?",buscar_numero(numeros, 30))  # True
+print("¿El numero 15 esta en la lista?",buscar_numero(numeros, 15))  # False
+
+
+def suma_positivos(lista):
+    suma=0
+    for numero in lista:
+        if numero >0: #Solo sumamos si es positivo.
+            suma += numero
+    return suma
+numeros = [10, -5, 3, -2, 7, 0]
+print(10,-5, 3,-2, 7, 0)
+resultado = suma_positivos(numeros)
+print("Suma de positivos:", resultado)
+  
+        
+
+
+
